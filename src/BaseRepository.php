@@ -1,6 +1,6 @@
 <?php
 
-namespace Creode\LaravelRepostory;
+namespace Creode\LaravelRepository;
 
 abstract class BaseRepository {
     /**
