@@ -9,24 +9,11 @@ namespace Creode\LaravelRepository;
  */
 abstract class BaseRepository {
     /**
-     * The model instance.
-     *
-     * @var \Illuminate\Database\Eloquent\Model
-     */
-    protected $model;
-
-    public function __construct()
-    {
-        $modelClass = $this->getModel();
-        $this->model = new $modelClass;
-    }
-
-    /**
      * Gets the model class name.
      *
      * @return string
      */
-    abstract function getModel(): string;
+    abstract protected function getModel(): string;
 
     /**
      * PHP Magic method which will pass any method calls to the model.
