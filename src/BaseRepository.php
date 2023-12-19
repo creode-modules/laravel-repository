@@ -2,6 +2,9 @@
 
 namespace Creode\LaravelRepository;
 
+/**
+ * @mixin \Illuminate\Database\Eloquent\Model
+ */
 abstract class BaseRepository {
     /**
      * The model instance.
