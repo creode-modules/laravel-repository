@@ -1,0 +1,20 @@
+{
+    "name": "creode/laravel-repository",
+    "description": "Exposes a base repository class that allows interactions with custom models.",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Creode\\LaravelRepository\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Creode",
+            "email": "contact@creode.co.uk"
+        }
+    ],
+    "require": {
+        "illuminate/database": "^10.0"
+    }
+}
