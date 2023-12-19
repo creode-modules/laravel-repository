@@ -1,4 +1,5 @@
 # Laravel Repository
+
 Exposes a base repository class that allows interactions with custom models.
 
 ## Installation
