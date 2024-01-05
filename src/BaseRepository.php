@@ -7,7 +7,8 @@ namespace Creode\LaravelRepository;
  *
  * @mixin \Illuminate\Database\Eloquent\Model
  */
-abstract class BaseRepository {
+abstract class BaseRepository
+{
     /**
      * Gets the model class name.
      *
@@ -44,5 +45,17 @@ abstract class BaseRepository {
         }
 
         throw new \BadMethodCallException("Method {$method} does not exist on " . get_class($this) . " or " . $modelClassName);
+    }
+
+    /**
+     * Handle dynamic static method calls into the repository.
+     *
+     * @param  string  $method
+     * @param  array  $parameters
+     * @return mixed
+     */
+    public static function __callStatic($method, $arguments)
+    {
+        return (new static)->__call($method, $arguments);
     }
 }
